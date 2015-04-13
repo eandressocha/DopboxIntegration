@@ -10,8 +10,5 @@
 #import "AccountController.h"
 
 @interface AddPhotoVC : UIViewController <UIAlertViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-//in
-//@property (nonatomic, strong) Photographer * PhotographerTakingphoto;
-//out
 - (id)initWithFilesystem:(DBFilesystem *)filesystem root:(DBPath *)root;
 @end

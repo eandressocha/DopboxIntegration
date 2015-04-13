@@ -6,9 +6,6 @@
 //  Copyright (c) 2015 AndreSocha. All rights reserved.
 //
 //
-//UIViewController *controller = nil;
-//controller = [[AddPhotoVC alloc]initWithFilesystem:self.filesystem root: self.root];
-//[self.navigationController pushViewController:controller animated:YES];
 #import "DropboxPicsTVC.h"
 #import "AddPhotoVC.h"
 #import <MobileCoreServices/MobileCoreServices.h>
@@ -16,22 +13,11 @@
 @interface AddPhotoVC () <UITextViewDelegate>
 
 @property (nonatomic, retain)UIImageView *imagewindow;
-@property (nonatomic, assign) BOOL imagewindowloaded;
 @property (nonatomic, strong)UIImage *image;
 @property (nonatomic, strong) NSURL *imageURL;
-
-@property (nonatomic, retain) UIActivityIndicatorView *activityIndicator;
-@property (nonatomic, retain) DBFile *file;
-@property (nonatomic, retain) UITextView *textView;
-@property (nonatomic, assign) BOOL textViewLoaded;
-@property (nonatomic, retain) NSTimer *writeTimer;
-
 @property (nonatomic, retain) DBFilesystem *filesystem;
 @property (nonatomic, retain) DBPath *root;
-@property (nonatomic, retain) NSMutableArray *contents;
-@property (nonatomic, assign) BOOL creatingFolder;
-@property (nonatomic, retain) DBPath *fromPath;
-@property (nonatomic, retain) UITableViewCell *loadingCell;
+
 
 @end
 
@@ -47,12 +33,11 @@
     }
     return self;
 }
-//////////////////
+
+#pragma mark - ViewController lifecycle related methods
 
 - (void)unloadViews {
     self.imagewindow = nil;
-//    self.activityIndicator = nil;
-//    self.textView = nil;
 }
 
 - (void)viewDidLoad {
@@ -61,28 +46,11 @@
     self.imagewindow = [[UIImageView alloc]initWithFrame:self.view.bounds];
     self.imagewindow.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:self.imagewindow];
-    
-//    self.textView = [[UITextView alloc] initWithFrame:self.view.bounds];
-//    self.textView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//    self.textView.delegate = self;
-//    [self.view addSubview:self.textView];
-    
-//    self.activityIndicator = [[UIActivityIndicatorView alloc]
-//                              initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-//    CGRect frame = self.activityIndicator.frame;
-//    frame.origin.x = floorf(self.view.bounds.size.width/2 - frame.size.width/2);
-//    frame.origin.y = floorf(self.view.bounds.size.height/2 - frame.size.height/2);
-//    self.activityIndicator.frame = frame;
-//    [self.view addSubview:self.activityIndicator];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-//    __weak AddPhotoVC *weakSelf = self;
-//    [_file addObserver:self block:^() { [weakSelf reload]; }];
-//    [self.navigationController setToolbarHidden:YES];
-//    [self reload];
+
     __weak AddPhotoVC *weakSelf = self;
     [_filesystem addObserver:self block:^() { [weakSelf reload]; }];
     [self.navigationController setToolbarHidden:YES];
@@ -91,24 +59,13 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-//    [_file removeObserver:self];
-//    [self saveChanges];
     [_filesystem removeObserver:self];
-//    [self saveChanges];
 }
-
-//if ([self isPhotoAvailable]) {
-//    [_file writeData:[self actualPic] error:nil];
-//    [self.navigationController popViewControllerAnimated:TRUE];
-//    
-//}
-//[self reload];
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-/////////////////
 #pragma mark - image related methods
 
 -(void) setImage:(UIImage *)image{
@@ -177,19 +134,6 @@
     NSString *unique = [NSString stringWithFormat:@"%.0f", floor([NSDate timeIntervalSinceReferenceDate])];
     return [[documentDirectories firstObject]URLByAppendingPathComponent:unique];
 }
-//-(NSURL *)imageURL{
-//    if (!_imageURL && self.image) {
-//        NSURL *url = [self uniqueNameURL];
-//        if (url) {
-//            NSData *imageData = UIImageJPEGRepresentation(self.image, 1.0);
-//            if ([imageData writeToURL:url atomically:YES]) {
-//                _imageURL = url;
-//            }
-//        }
-//    }
-//    return _imageURL;
-//}
-
 
 -(NSData *)actualPic{
     return UIImageJPEGRepresentation(self.image, 1.0);
@@ -237,47 +181,6 @@
 
 - (void)reload {
     BOOL updateEnabled = YES;
-//    if (_file.status.cached) {
-//        if (!_textViewLoaded) {
-//            _textViewLoaded = YES;
-//            NSString *contents = [_file readString:nil];
-//            self.textView.text = contents;
-//        }
-//        
-//        [self.activityIndicator stopAnimating];
-//        self.textView.hidden = NO;
-//        
-//        if (_file.newerStatus.cached) {
-//            updateEnabled = YES;
-//        }
-//    } else {
-//        [self.activityIndicator startAnimating];
-//        self.textView.hidden = YES;
-//    }
-//    if (_filesystem.status.self) {
-//        if (!_textViewLoaded) {
-//            _textViewLoaded = YES;
-            //NSString *contents = [_filesystem readString:nil];
-            //self.textView.text = contents;
-//        }
-        
-//        [self.activityIndicator stopAnimating];
-//        self.textView.hidden = NO;
-//        self.imagewindow.hidden = NO;
-        
-//        if (_file.newerStatus.cached) {
-//            updateEnabled = YES;
-//        }
-
-//    }
-//    else {
-//        [self.activityIndicator startAnimating];
-//        self.textView.hidden = YES;
-
-//        self.imagewindow.hidden = YES;
-//    }
-//    self.navigationItem.rightBarButtonItem.enabled = updateEnabled;
-    
     self.imagewindow.hidden = NO;
     UIBarButtonItem *cancel =
     [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain
@@ -293,34 +196,12 @@
     self.navigationItem.leftBarButtonItem.enabled = updateEnabled;
 }
 
-- (void)saveChanges {
-    if (!_writeTimer) return;
-    [_writeTimer invalidate];
-    self.writeTimer = nil;
-    
-    [_file writeString:self.textView.text error:nil];
-}
-
-- (void)didPressUpdate {
-    [_file update:nil];
-    _textViewLoaded = NO;
-    [self reload];
-}
 -(void)didPressDone{
     
     if ([self isPhotoAvailable]) {
         [self createFile];
         [self.navigationController popViewControllerAnimated:TRUE];
-//        [_file writeData:[self actualPic] error:nil];
-//        [self.navigationController popViewControllerAnimated:TRUE];
-//        
-////        [self createFile];
-////        NSArray *viewControllers = self.navigationController.viewControllers;
-////        id<AccountController> accountController =
-////        (id<AccountController>)[viewControllers objectAtIndex:1];
-////        DBAccount currentaccount = accountController.account;
-//        DropboxPicsTVC *controller = [[DropboxPicsTVC alloc]init];
-//        [self.navigationController popToViewController:controller animated:YES];
+
     }
     [self reload];
 }

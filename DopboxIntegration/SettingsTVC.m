@@ -156,12 +156,6 @@ typedef enum {
     if (!account.linked && [self.currentAccount isEqual:account]) {
         [self.navigationController popToViewController:self animated:YES];
         NSLog(@"Your account was unlinked!");
-        /*  } else if (!account.linked && [_accounts containsObject:account]) {
-         NSInteger index = [_accounts indexOfObject:account];
-         [_accounts removeObjectAtIndex:index];
-         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-         [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
-         */
     } else {
         [self reload];
     }

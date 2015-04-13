@@ -12,6 +12,6 @@
 
 
 @interface DropboxPicsTVC : UITableViewController <AccountController>
-//- (id)initWithFilesystem:(DBFilesystem *)filesystem root:(DBPath *)root ;
-//@property (nonatomic, strong)NSURL *photo;
+
 @end
+

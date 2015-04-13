@@ -137,47 +137,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     }
 }
 
-
-#pragma mark - UIActionSheetDelegate methods
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex != actionSheet.cancelButtonIndex) {
-        _creatingFolder = buttonIndex > 0;
-        NSString *title = _creatingFolder ? @"Create a folder" : @"Create a file";
-        UIAlertView *alertView =
-        [[UIAlertView alloc]
-         initWithTitle:title message:nil delegate:self
-         cancelButtonTitle:@"Cancel" otherButtonTitles:@"Create", nil];
-        alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
-        [alertView show];
-    }
-}
-
-
-#pragma mark - UIAlertViewDelegate methods
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex != alertView.cancelButtonIndex) {
-        NSString *input = [alertView textFieldAtIndex:0].text;
-        
-        if (_moving) {
-            [self moveTo:input];
-        } else {
-            [self createAt:input];
-        }
-    }
-    
-    _moving = NO;
-    self.fromPath = nil;
-    [self loadFiles];
-}
-
-
 #pragma mark - private methods
-
-//NSInteger sortFileInfos(id obj1, id obj2, void *ctx) {
-//    return [[obj1 path] compare:[obj2 path]];
-//}
 
 - (void)loadFiles {
     if (_loadingFiles) return;
@@ -197,34 +157,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)reload {
     [self.tableView reloadData];
-    
-//    UIBarButtonItem *moveItem =
-//    [[UIBarButtonItem alloc]
-//     initWithTitle:@"Move" style:UIBarButtonItemStyleBordered
-//     target:self action:@selector(didPressMove)];
-//    moveItem.enabled = (_contents != nil);
-    
-//    if (_moving) {
-//        moveItem.enabled = NO;
-//        UIBarButtonItem *messageItem =
-//        [[UIBarButtonItem alloc]
-//         initWithTitle:@"Select a file to move" style:UIBarButtonItemStylePlain
-//         target:nil action:nil];
-//        self.toolbarItems = [NSArray arrayWithObjects:moveItem, messageItem, nil];
-    
-//        self.navigationItem.rightBarButtonItem =
-//        [[UIBarButtonItem alloc]
-//         initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-//         target:self action:@selector(didPressCancel)];
-//    } else {
-//        NSMutableArray *items = [NSMutableArray arrayWithObject:moveItem];
-        if (_filesystem.status.upload.inProgress) {
-//            UIBarButtonItem *flexSpace =
-//            [[UIBarButtonItem alloc]
-//             initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-//             target:nil action:nil];
-            
-//            [items addObject:flexSpace];
+    if (_filesystem.status.upload.inProgress) {
             
             UIActivityIndicatorView *activityIndicator =
             [[UIActivityIndicatorView alloc]
@@ -233,31 +166,17 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
             UIBarButtonItem *uploadItem =
             [[UIBarButtonItem alloc] initWithCustomView:activityIndicator];
             uploadItem.style = UIBarButtonItemStylePlain;
-//            [items addObject:uploadItem];
         }
-//        self.toolbarItems = items;
-        
         self.navigationItem.rightBarButtonItem =
         [[UIBarButtonItem alloc]
          initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
          target:self action:@selector(didPressAddPic)];
-//    }
 }
 
 - (void)didPressAddPic {
     AddPhotoVC *controller = [[AddPhotoVC alloc] initWithFilesystem:_filesystem root:_root];
     [self.navigationController pushViewController:controller animated:YES];
 
-}
-
-- (void)didPressCancel {
-    _moving = NO;
-    [self reload];
-}
-
-- (void)didPressMove {
-    _moving = YES;
-    [self reload];
 }
 
 - (void)createAt:(NSString *)input {
@@ -269,8 +188,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
         if (!file) {
             NSLog(@"Unable to create note An error has occurred");
         } else {
-           // NoteController *controller = [[NoteController alloc] initWithFile:file];
-           // [self.navigationController pushViewController:controller animated:YES];
+//            AddPhotoVC controller = [[AddPhotoVC alloc]initWithFilesystem:_filesystem root:_root];
+//            [self.navigationController pushViewController:controller animated:YES];
         }
     } else {
         DBPath *path = [_root childPath:input];
@@ -283,28 +202,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
             [self.navigationController pushViewController:controller animated:YES];
         }
     }
-}
-
-- (void)moveTo:(NSString *)input {
-    NSArray *components = [input componentsSeparatedByString:@"/"];
-    
-    DBPath *path = _root;
-    if ([[components objectAtIndex:0] length] == 0) {
-        path = [DBPath root];
-    }
-    
-    for (NSString *component in components) {
-        if ([component isEqual:@".."]) {
-            path = [path parent];
-        } else {
-            path = [path childPath:component];
-        }
-    }
-    
-    [_filesystem movePath:_fromPath toPath:path error:nil];
-    
-    _moving = NO;
-    self.fromPath = nil;
 }
 
 - (DBAccount *)account {

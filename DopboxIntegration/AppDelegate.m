@@ -5,7 +5,6 @@
 //  Created by Andres Socha on 4/11/15.
 //  Copyright (c) 2015 AndreSocha. All rights reserved.
 //
-//#import "DropboxPicsTVC.h"
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <Dropbox/Dropbox.h>
@@ -82,37 +81,4 @@
     
     return YES;
 }
-//-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url sourceApplication:(NSString *)source annotation:(id)annotation{
-//    DBAccount *account = [[DBAccountManager sharedManager]handleOpenURL:url];
-//    if(account){
-//        NSLog(@"All linked successfully");
-//        [self checkAccountandCreateFileSystem:account];
-
-        
-//        //Creating a file system if it does not exist
-//        DBFilesystem *filesystem = [DBFilesystem sharedFilesystem];
-//        
-//        if (!filesystem) {
-//            filesystem = [[DBFilesystem alloc] initWithAccount:account];
-//            [DBFilesystem setSharedFilesystem:filesystem];
-//        }
-        
-//        //List contents in a folder from the filesystem
-//        DBError *error = nil;
-//        NSArray *contents = [filesystem listFolder:[DBPath root] error:&error];
-//        if (!contents){
-//            NSLog(@"Error listing root folder");
-//            return YES;
-//        }
-//        
-//        for (DBFileInfo *info in contents) {
-//            NSString *fileInfoLine = [NSString stringWithFormat:@"    %@, %@\n",
-//                                      info.path, info.modifiedTime];
-//            NSLog(@"file content: %@", fileInfoLine);
-//        }
-        
-//        return YES;
-//    }
-//    return NO;
-//}
 @end
