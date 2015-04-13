@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57383A8E1AD3649A00A8A0AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57383A8D1AD3649A00A8A0AA /* main.m */; };
+		57383A911AD3649A00A8A0AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57383A901AD3649A00A8A0AA /* AppDelegate.m */; };
+		57383A941AD3649A00A8A0AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57383A931AD3649A00A8A0AA /* ViewController.m */; };
+		57383A971AD3649A00A8A0AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57383A951AD3649A00A8A0AA /* Main.storyboard */; };
+		57383A991AD3649A00A8A0AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57383A981AD3649A00A8A0AA /* Images.xcassets */; };
+		57383A9C1AD3649A00A8A0AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57383A9A1AD3649A00A8A0AA /* LaunchScreen.xib */; };
+		57383AA81AD3649A00A8A0AA /* DopboxIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57383AA71AD3649A00A8A0AA /* DopboxIntegrationTests.m */; };
+		57383AB21AD3654700A8A0AA /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57383AB11AD3654700A8A0AA /* Dropbox.framework */; };
+		57383AB41AD3660900A8A0AA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57383AB31AD3660900A8A0AA /* CFNetwork.framework */; };
+		57383AB61AD3664F00A8A0AA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57383AB51AD3664F00A8A0AA /* Security.framework */; };
+		57383AB81AD3669700A8A0AA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57383AB71AD3669700A8A0AA /* SystemConfiguration.framework */; };
+		57383ABA1AD3669F00A8A0AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57383AB91AD3669F00A8A0AA /* QuartzCore.framework */; };
+		57383ABC1AD366BF00A8A0AA /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 57383ABB1AD366BF00A8A0AA /* libc++.dylib */; };
+		57383ABE1AD366D100A8A0AA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 57383ABD1AD366D100A8A0AA /* libz.dylib */; };
+		57383AC11AD4693400A8A0AA /* AddPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57383AC01AD4693400A8A0AA /* AddPhotoViewController.m */; };
+		574CAC7B1AD9E6EA00120997 /* AddPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 574CAC7A1AD9E6EA00120997 /* AddPhotoVC.m */; };
+		575397BD1AD8BDDF007B24FB /* DropboxPicsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 575397BC1AD8BDDF007B24FB /* DropboxPicsTVC.m */; };
+		575397C01AD93F44007B24FB /* SettingsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 575397BF1AD93F44007B24FB /* SettingsTVC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57383AA21AD3649A00A8A0AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57383A801AD3649A00A8A0AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57383A871AD3649A00A8A0AA;
+			remoteInfo = DopboxIntegration;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		57383A881AD3649A00A8A0AA /* DopboxIntegration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DopboxIntegration.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57383A8C1AD3649A00A8A0AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57383A8D1AD3649A00A8A0AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		57383A8F1AD3649A00A8A0AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		57383A901AD3649A00A8A0AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		57383A921AD3649A00A8A0AA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		57383A931AD3649A00A8A0AA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		57383A961AD3649A00A8A0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57383A981AD3649A00A8A0AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		57383A9B1AD3649A00A8A0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		57383AA11AD3649A00A8A0AA /* DopboxIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopboxIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57383AA61AD3649A00A8A0AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57383AA71AD3649A00A8A0AA /* DopboxIntegrationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DopboxIntegrationTests.m; sourceTree = "<group>"; };
+		57383AB11AD3654700A8A0AA /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		57383AB31AD3660900A8A0AA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		57383AB51AD3664F00A8A0AA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		57383AB71AD3669700A8A0AA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		57383AB91AD3669F00A8A0AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		57383ABB1AD366BF00A8A0AA /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		57383ABD1AD366D100A8A0AA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		57383ABF1AD4693400A8A0AA /* AddPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPhotoViewController.h; sourceTree = "<group>"; };
+		57383AC01AD4693400A8A0AA /* AddPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPhotoViewController.m; sourceTree = "<group>"; };
+		574CAC791AD9E6EA00120997 /* AddPhotoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPhotoVC.h; sourceTree = "<group>"; };
+		574CAC7A1AD9E6EA00120997 /* AddPhotoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPhotoVC.m; sourceTree = "<group>"; };
+		575397BB1AD8BDDF007B24FB /* DropboxPicsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxPicsTVC.h; sourceTree = "<group>"; };
+		575397BC1AD8BDDF007B24FB /* DropboxPicsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxPicsTVC.m; sourceTree = "<group>"; };
+		575397BE1AD93F44007B24FB /* SettingsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTVC.h; sourceTree = "<group>"; };
+		575397BF1AD93F44007B24FB /* SettingsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTVC.m; sourceTree = "<group>"; };
+		575397C21AD9A0CA007B24FB /* AccountController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57383A851AD3649A00A8A0AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57383ABE1AD366D100A8A0AA /* libz.dylib in Frameworks */,
+				57383ABC1AD366BF00A8A0AA /* libc++.dylib in Frameworks */,
+				57383ABA1AD3669F00A8A0AA /* QuartzCore.framework in Frameworks */,
+				57383AB81AD3669700A8A0AA /* SystemConfiguration.framework in Frameworks */,
+				57383AB61AD3664F00A8A0AA /* Security.framework in Frameworks */,
+				57383AB41AD3660900A8A0AA /* CFNetwork.framework in Frameworks */,
+				57383AB21AD3654700A8A0AA /* Dropbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57383A9E1AD3649A00A8A0AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57383A7F1AD3649A00A8A0AA = {
+			isa = PBXGroup;
+			children = (
+				57383ABD1AD366D100A8A0AA /* libz.dylib */,
+				57383ABB1AD366BF00A8A0AA /* libc++.dylib */,
+				57383AB91AD3669F00A8A0AA /* QuartzCore.framework */,
+				57383AB71AD3669700A8A0AA /* SystemConfiguration.framework */,
+				57383AB51AD3664F00A8A0AA /* Security.framework */,
+				57383AB31AD3660900A8A0AA /* CFNetwork.framework */,
+				57383A8A1AD3649A00A8A0AA /* DopboxIntegration */,
+				57383AA41AD3649A00A8A0AA /* DopboxIntegrationTests */,
+				57383A891AD3649A00A8A0AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		57383A891AD3649A00A8A0AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57383A881AD3649A00A8A0AA /* DopboxIntegration.app */,
+				57383AA11AD3649A00A8A0AA /* DopboxIntegrationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57383A8A1AD3649A00A8A0AA /* DopboxIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				575397C21AD9A0CA007B24FB /* AccountController.h */,
+				57383A8F1AD3649A00A8A0AA /* AppDelegate.h */,
+				574CAC791AD9E6EA00120997 /* AddPhotoVC.h */,
+				574CAC7A1AD9E6EA00120997 /* AddPhotoVC.m */,
+				57383A901AD3649A00A8A0AA /* AppDelegate.m */,
+				57383A921AD3649A00A8A0AA /* ViewController.h */,
+				57383A931AD3649A00A8A0AA /* ViewController.m */,
+				57383A951AD3649A00A8A0AA /* Main.storyboard */,
+				575397BE1AD93F44007B24FB /* SettingsTVC.h */,
+				575397BF1AD93F44007B24FB /* SettingsTVC.m */,
+				575397BB1AD8BDDF007B24FB /* DropboxPicsTVC.h */,
+				575397BC1AD8BDDF007B24FB /* DropboxPicsTVC.m */,
+				57383ABF1AD4693400A8A0AA /* AddPhotoViewController.h */,
+				57383AC01AD4693400A8A0AA /* AddPhotoViewController.m */,
+				57383A981AD3649A00A8A0AA /* Images.xcassets */,
+				57383A9A1AD3649A00A8A0AA /* LaunchScreen.xib */,
+				57383A8B1AD3649A00A8A0AA /* Supporting Files */,
+			);
+			path = DopboxIntegration;
+			sourceTree = "<group>";
+		};
+		57383A8B1AD3649A00A8A0AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				57383AB11AD3654700A8A0AA /* Dropbox.framework */,
+				57383A8C1AD3649A00A8A0AA /* Info.plist */,
+				57383A8D1AD3649A00A8A0AA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		57383AA41AD3649A00A8A0AA /* DopboxIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				57383AA71AD3649A00A8A0AA /* DopboxIntegrationTests.m */,
+				57383AA51AD3649A00A8A0AA /* Supporting Files */,
+			);
+			path = DopboxIntegrationTests;
+			sourceTree = "<group>";
+		};
+		57383AA51AD3649A00A8A0AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				57383AA61AD3649A00A8A0AA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57383A871AD3649A00A8A0AA /* DopboxIntegration */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57383AAB1AD3649A00A8A0AA /* Build configuration list for PBXNativeTarget "DopboxIntegration" */;
+			buildPhases = (
+				57383A841AD3649A00A8A0AA /* Sources */,
+				57383A851AD3649A00A8A0AA /* Frameworks */,
+				57383A861AD3649A00A8A0AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DopboxIntegration;
+			productName = DopboxIntegration;
+			productReference = 57383A881AD3649A00A8A0AA /* DopboxIntegration.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57383AA01AD3649A00A8A0AA /* DopboxIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57383AAE1AD3649A00A8A0AA /* Build configuration list for PBXNativeTarget "DopboxIntegrationTests" */;
+			buildPhases = (
+				57383A9D1AD3649A00A8A0AA /* Sources */,
+				57383A9E1AD3649A00A8A0AA /* Frameworks */,
+				57383A9F1AD3649A00A8A0AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57383AA31AD3649A00A8A0AA /* PBXTargetDependency */,
+			);
+			name = DopboxIntegrationTests;
+			productName = DopboxIntegrationTests;
+			productReference = 57383AA11AD3649A00A8A0AA /* DopboxIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57383A801AD3649A00A8A0AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = AndreSocha;
+				TargetAttributes = {
+					57383A871AD3649A00A8A0AA = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					57383AA01AD3649A00A8A0AA = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 57383A871AD3649A00A8A0AA;
+					};
+				};
+			};
+			buildConfigurationList = 57383A831AD3649A00A8A0AA /* Build configuration list for PBXProject "DopboxIntegration" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57383A7F1AD3649A00A8A0AA;
+			productRefGroup = 57383A891AD3649A00A8A0AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57383A871AD3649A00A8A0AA /* DopboxIntegration */,
+				57383AA01AD3649A00A8A0AA /* DopboxIntegrationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57383A861AD3649A00A8A0AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57383A971AD3649A00A8A0AA /* Main.storyboard in Resources */,
+				57383A9C1AD3649A00A8A0AA /* LaunchScreen.xib in Resources */,
+				57383A991AD3649A00A8A0AA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57383A9F1AD3649A00A8A0AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57383A841AD3649A00A8A0AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57383A941AD3649A00A8A0AA /* ViewController.m in Sources */,
+				57383AC11AD4693400A8A0AA /* AddPhotoViewController.m in Sources */,
+				575397C01AD93F44007B24FB /* SettingsTVC.m in Sources */,
+				575397BD1AD8BDDF007B24FB /* DropboxPicsTVC.m in Sources */,
+				57383A911AD3649A00A8A0AA /* AppDelegate.m in Sources */,
+				574CAC7B1AD9E6EA00120997 /* AddPhotoVC.m in Sources */,
+				57383A8E1AD3649A00A8A0AA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57383A9D1AD3649A00A8A0AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57383AA81AD3649A00A8A0AA /* DopboxIntegrationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57383AA31AD3649A00A8A0AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57383A871AD3649A00A8A0AA /* DopboxIntegration */;
+			targetProxy = 57383AA21AD3649A00A8A0AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		57383A951AD3649A00A8A0AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57383A961AD3649A00A8A0AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		57383A9A1AD3649A00A8A0AA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57383A9B1AD3649A00A8A0AA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		57383AA91AD3649A00A8A0AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57383AAA1AD3649A00A8A0AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57383AAC1AD3649A00A8A0AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DopboxIntegration",
+				);
+				INFOPLIST_FILE = DopboxIntegration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		57383AAD1AD3649A00A8A0AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DopboxIntegration",
+				);
+				INFOPLIST_FILE = DopboxIntegration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		57383AAF1AD3649A00A8A0AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DopboxIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DopboxIntegration.app/DopboxIntegration";
+			};
+			name = Debug;
+		};
+		57383AB01AD3649A00A8A0AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DopboxIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DopboxIntegration.app/DopboxIntegration";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57383A831AD3649A00A8A0AA /* Build configuration list for PBXProject "DopboxIntegration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57383AA91AD3649A00A8A0AA /* Debug */,
+				57383AAA1AD3649A00A8A0AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57383AAB1AD3649A00A8A0AA /* Build configuration list for PBXNativeTarget "DopboxIntegration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57383AAC1AD3649A00A8A0AA /* Debug */,
+				57383AAD1AD3649A00A8A0AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57383AAE1AD3649A00A8A0AA /* Build configuration list for PBXNativeTarget "DopboxIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57383AAF1AD3649A00A8A0AA /* Debug */,
+				57383AB01AD3649A00A8A0AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 57383A801AD3649A00A8A0AA /* Project object */;
+}
